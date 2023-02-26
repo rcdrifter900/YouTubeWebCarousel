@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC>
+
+<style>
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.scene {
+
+  position: relative;
+  width: 560px;
+  height: 315px;
+  margin: 40px auto;
+  perspective: 900px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-900px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 560px;
+  height: 315px;
+  left: 10px;
+  top: 10px;
+  border: 2px solid black;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.carousel__cell:nth-child(9n+1) { background: hsla(  0, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+2) { background: hsla( 40, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+3) { background: hsla( 80, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+4) { background: hsla(120, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+5) { background: hsla(160, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+6) { background: hsla(200, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+7) { background: hsla(240, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+8) { background: hsla(280, 100%, 50%, 0.8); }
+.carousel__cell:nth-child(9n+0) { background: hsla(320, 100%, 50%, 0.8); }
+
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(900px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(900px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(900px); }
+.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(900px); }
+.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(900px); }
+.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(900px); }
+.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(900px); }
+.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(900px); }
+.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(900px); }
+
+.previous-button {
+  background: rgb(139,187,227);
+  background: linear-gradient(90deg, rgba(139,187,227,1) 0%, rgba(50,118,167,1) 100%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+}
+.previous-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.next-button {
+  background: rgb(139,187,227);
+  background: linear-gradient(90deg, rgba(139,187,227,1) 0%, rgba(50,118,167,1) 100%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+}
+.next-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+
+<body>
+  <div class="scene">
+    <div class="carousel">
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OTuZ9oSjYDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WvvFlj0d3K4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H6STA2ApTlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fbBnKdj-VLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bcLq53ZH-rI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WqwsCBlae5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/v6HUPLzMMJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jU4eBvAlNHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="carousel__cell">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2-X7AZUhyZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <p style="text-align: center;padding-bottom: 25px;">
+    <button class="previous-button">Previous</button>
+    <button class="next-button">Next</button>
+  </p>
+</body>
+
+<script>
+  var carousel = document.querySelector('.carousel');
+var cellCount = 9;
+var selectedIndex = 0;
+
+function rotateCarousel() {
+  var angle = selectedIndex / cellCount * -360;
+  carousel.style.transform = 'translateZ(-900px) rotateY(' + angle + 'deg)';
+}
+
+var prevButton = document.querySelector('.previous-button');
+prevButton.addEventListener( 'click', function() {
+  selectedIndex--;
+  rotateCarousel();
+});
+
+var nextButton = document.querySelector('.next-button');
+nextButton.addEventListener( 'click', function() {
+  selectedIndex++;
+  rotateCarousel();
+});
+</script>
+
