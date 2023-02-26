@@ -1,5 +1,5 @@
 # YouTubeWebCarousel
-Single containing HTML file to add a YouTube Carousel to an online WYSIWYG web buildey, 
+Single containing HTML file to add a YouTube Carousel to an online WYSIWYG web builder, 
 for example wix, wordpress, squarespace and more.
 
 TODO
